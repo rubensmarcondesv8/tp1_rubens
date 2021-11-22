@@ -27,7 +27,7 @@ vector<unsigned> ordenaByIndice(vector<double> lista){
   }
   for (int i = 0; i < lista.size() - 1; i++){
     for (int j = 0; j < lista.size() - i - 1; j++){
-      if (lista[j] < lista[j + 1]){
+      if (lista[j] > lista[j + 1]){
         temp2 = lista[j];
         temp1 = vetor[j];
         lista[j] = lista[j + 1];
@@ -141,7 +141,8 @@ int main() {
 
   vector<unsigned> listaById;
   listaById = ordenaByIndice(score);
-
+  // essa lista de pref vai do menor preferido para o maior para que posssamos fazer o pop_back
+  // no vecor a medida que se faz as prpostas.
   //savar listaById em cada posicao da lista de pref da loja
   
 //  for (vector<unsigned>::iterator it=listaById.begin(); it != listaById.end(); ++it){
